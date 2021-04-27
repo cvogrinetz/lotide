@@ -7,19 +7,19 @@ const assertEqual = function(actual, expected) {
 };
 
 
-// make a function to compare 2 arrays together 
+// make a function to compare 2 arrays together
 // should output a pass or fail when compared
 // need to fix undefined return problem
 
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
 
-  if(JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    console.log("True")
+  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
+    console.log("True");
     return true;
   } else {
-    console.log("False")
+    console.log("False");
     return false;
-  } 
+  }
 };
 
 // USED TO TEST ABOVE FUNCTION
