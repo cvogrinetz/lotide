@@ -21,20 +21,18 @@ const eqArrays = function(arr1, arr2) {
 
 // THIS IS THE WITHOUT FUNCTION
 
-const without = function(source, itemsToRemove) {
-  let newArr = source;
-
-  for(let i = 0; i < source.length; i++) {
-    for(let j = 0; j < itemsToRemove.length; j++) {
-      if(source[i] === itemsToRemove[j]) {
-        newArr.splice(i, 1)
-        return newArr;
-      }
-    }   
+const without = function (source, itemsToRemoved) {
+  let newArray = source;
+  for (let i = 0; i < itemsToRemoved.length; i++) {
+    newArray = newArray.filter(function(items) {
+      return items !== itemsToRemoved[i];
+    })
   }
-  return newArr;
-};  
+  console.log(newArray)
+  return newArray;
+};
+
 
 // USED TO TEST ABOVE FUNCTION
-//assertArrayEquals(without([1, 2, 3], [1])[2, 3]) // => [2, 3]
-//assertArrayEquals(without(["1", "2", "3"], [1, 2, "3"])[1, 2]) // => ["1", "2"]
+assertArrayEquals(without([1, 2, 3], [1]), [2, 3]) // => [2, 3]
+assertArrayEquals(without(["1", "2", "3"], [1, 2, "3"]), ["1","2"]) // => ["1", "2"]
