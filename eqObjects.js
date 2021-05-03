@@ -1,3 +1,4 @@
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`👽👽👽 Assertion Passed: ${actual} === ${expected}`);
@@ -21,7 +22,7 @@ const eqArrays = function(arr1, arr2) {
 
 const eqObjects = function(obj1, obj2) {
   if (Object.keys(obj1).length !== Object.keys(obj2).length) {
-    console.log('FALSE BECAUSE LENGTH DONT MATCH');
+    // console.log('FALSE BECAUSE LENGTH DONT MATCH');
     return false;
   }
 
@@ -29,14 +30,14 @@ const eqObjects = function(obj1, obj2) {
     if (Array.isArray(obj1[key])) {
       return eqArrays(obj1[key], obj2[key]);
     } else if (obj2[key] === undefined) {
-      console.log('FALSE BECAUSE UNDEFINED');
+      // console.log('FALSE BECAUSE UNDEFINED');
       return false;
     } else if (obj1[key] !== obj2[key]) {
-      console.log('FALSE BECAUSE KEYS DONT MATCH');
+      // console.log('FALSE BECAUSE KEYS DONT MATCH');
       return false;
     }
   }
-  console.log('TRUE');
+  // console.log('TRUE');
   return true;
 };
 

@@ -1,26 +1,5 @@
-const eqArrays = function(arr1, arr2) {
+// const assertArrayEquals = require('./assertArrayEqual')
 
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    console.log("True");
-    return true;
-  } else {
-    console.log("False");
-    return false;
-  }
-};
-
-const assertArrayEquals = function(arr1, arr2) {
-
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    console.log(`👽👽👽 Assertion Passed: ${arr1} === ${arr2}`);
-    return true;
-  } else {
-    console.log(`🥵️🥵️🥵️ Assertion Failed: ${arr1} !== ${arr2}`);
-    return false;
-  }
-};
-
-// THIS IS THE MAP FUNCTION
 
 const map = (arr, func) => {
   const result = [];
@@ -30,6 +9,8 @@ const map = (arr, func) => {
   return result;
 };
 
+
+module.exports = map;
 
 // USED TO TEST MAP FUNCTION
 

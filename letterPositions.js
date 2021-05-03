@@ -1,30 +1,5 @@
-const assertArrayEquals = function(arr1, arr2) {
+const assertArrayEquals = require('./assertArrayEqual');
 
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    console.log(`👽👽👽 Assertion Passed: ${arr1} === ${arr2}`);
-    return true;
-  } else {
-    console.log(`🥵️🥵️🥵️ Assertion Failed: ${arr1} !== ${arr2}`);
-    return false;
-  }
-};
-
-
-
-const eqArrays = function(arr1, arr2) {
-
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) {
-    console.log("True");
-    return true;
-  } else {
-    console.log("False");
-    return false;
-  }
-};
-
-
-
-// THIS IS THE LETTER POSITION FUNCTION
 
 const letterPositions = function(sentence) {
   const result = {};
@@ -42,14 +17,8 @@ const letterPositions = function(sentence) {
 };
 
 
+module.exports = letterPositions;
 
 
-
-//console.log(letterPositions("lighthouse in the house"));
-//console.log(sentence.indexOf(i))
-//assertArrayEquals(letterPositions("hello").e, [1]);
-
-
-// make a function that returns an object
-// key value will be letter
-// value will be an array of the indices where that letter is
+console.log(letterPositions("lighthouse in the house"));
+assertArrayEquals(letterPositions("hello").e, [1]);
