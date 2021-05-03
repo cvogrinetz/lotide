@@ -6,10 +6,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// these are used to test above function
-//assertEqual("Lighthouse Labs", "Bootcamp");
-//assertEqual(1, 1);
-//assertEqual('string', 'string');
-//assertEqual('oldString', 'newString');
-//assertEqual(5, 5);
-//assertEqual(9, 8);
+
+
+module.exports = assertEqual;
